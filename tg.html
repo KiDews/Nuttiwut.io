@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI</title>
+    <link rel="stylesheet" href="css/ty.css"> 
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/jquery.js"></script>
+    <p>หาค่าสามเหลี่ยม:</p>
+    <script>
+        function getData(form){
+            w=form.w.value
+            h=form.h.value
+            w=Number.parseInt(w)
+            h=Number.parseInt(h)
+            sum=0.5*(w*h)
+            message=`แสดงข้อมูลดังนี้ <br> กว้าง คือ ${w} <br>`
+            message+=`สูง คือ ${h}<br>คือ ${sum}`
+            document.getElementById("answer").innerHTML=message
+        
+            }
+    </script>
+    
+
+<body>
+    <form id="BMI">
+        กว้าง(w.) : <input type="number" id="w">
+        สูง(h.) : <input type="number" id="h">
+        <input type="button" value="คลิ๊ก" onclick="getData(this.form)">
+</form> 
+<div id="answer"></div>
+
+</body>
+</html>
